@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Animated Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #1e1e2f;
+            color: #ffffff;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: #2c2c3e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project {
+            background: #3a3a50;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">akilan</h1>
+        <p id="subtitle">Full-Stack Developer | UI/UX Designer | Tech Enthusiast</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hi, I'm akilan. I specialize in developing responsive and dynamic web applications, blending design with functionality.</p>
+        <p>Explore my projects and get in touch!</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Myself</h2>
+        <p>Passionate developer with experience in JavaScript, React, Node.js, and UI/UX design. I enjoy solving complex problems with creative solutions.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>A web application for E-Ration system with User friendly UI.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>An AI-powered chatbot for customer support.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: akilan@gmail.com</p>
+        <p>LinkedIn: <a href="#">Deepak S</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 akilan. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        gsap.from("#title", { duration: 1.5, y: -50, opacity: 0, ease: "bounce" });
+        gsap.from("#subtitle", { duration: 1.5, x: -50, opacity: 0, delay: 0.5 });
+        gsap.from("nav ul li", { duration: 1, y: -20, opacity: 0, stagger: 0.3 });
+        gsap.from("section", { duration: 1, opacity: 0, scale: 0.9, stagger: 0.5 });
+    </script>
+</body>
+</html>
